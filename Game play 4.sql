@@ -1,4 +1,4 @@
-/*Table: Activity
+/*Table:  Activity
 
 +--------------+---------+
 | Column Name  | Type    |
