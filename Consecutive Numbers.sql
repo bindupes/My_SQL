@@ -1,5 +1,5 @@
 /*
-Table: Logs
+Table:  Logs
 
 +-------------+---------+
 | Column Name | Type    |
