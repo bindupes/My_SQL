@@ -1,5 +1,5 @@
 /*
-Table: Orders
+Table:  Orders
 
 +-----------------+----------+
 | Column Name     | Type     |
