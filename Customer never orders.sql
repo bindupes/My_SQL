@@ -1,5 +1,5 @@
 /*
-Table: Customers
+Table:  Customers
 
 +-------------+---------+
 | Column Name | Type    |
