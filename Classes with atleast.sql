@@ -1,5 +1,5 @@
 /*
-Table: Courses
+Table:  Courses
 
 +-------------+---------+
 | Column Name | Type    |
