@@ -72,11 +72,12 @@ Explanation: If there is only one node on the tree, you only need to output its 
  
 
 Note: This question is the same as 3054: Binary Tree Nodes. */
-SELECT 
-    t.id,
-    CASE
-        WHEN t.p_id IS NULL THEN 'Root'
-        WHEN EXISTS (SELECT 1 FROM Tree c WHERE c.p_id = t.id) THEN 'Inner'
-        ELSE 'Leaf'
-    END AS type
+SELECT t.id , 
+CASE 
+WHEN t.p_id IS NULL THEN "Root"
+WHEN  EXISTS (SELECT * FROM Tree c WHERE c.p_id = t.id ) THEN "Inner"
+ELSE "Leaf"
+
+END AS type
+
 FROM Tree t;
