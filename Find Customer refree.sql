@@ -46,6 +46,6 @@ Output:
 | Zack |
 +------+
 */
-SELECT name
-FROM Customer
-WHERE referee_id != 2 OR referee_id IS NULL;
+SELECT name 
+FROM Customer 
+WHERE refree_id != 2 OR refree_id IS NULL;
