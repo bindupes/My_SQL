@@ -42,13 +42,13 @@ The person with id 3 is a friend of people 1, 2, and 4, so he has three friends 
  
 
 Follow up: In the real world, multiple people could have the same most number of friends. Could you find all these people in this case?*/
-WITH AllFriends AS (
-    SELECT requester_id AS id, accepter_id AS friend_id FROM RequestAccepted
-    UNION ALL
-    SELECT accepter_id AS id, requester_id AS friend_id FROM RequestAccepted
-)
-SELECT id, COUNT(friend_id) AS num
-FROM AllFriends
-GROUP BY id
-ORDER BY num DESC
-LIMIT 1;
+
+SELECT id , COUNT(
+ FROM (
+ SELECT requester_id AS id , accepter_id AS friend_id FROM RequestAccepted
+ UNION
+ SELECT accepter_id AS id , resquester_id AS friend_id FROM RequestAccepted
+ ) AS AllFriends
+ GROUP BY id
+ ORDER BY num DESC
+ LIMIT 1;
