@@ -49,17 +49,17 @@ Explanation:
 The four rows with ids 5, 6, 7, and 8 have consecutive ids and each of them has >= 100 people attended. Note that row 8 was included even though the visit_date was not the next day after row 7.
 The rows with ids 2 and 3 are not included because we need at least three consecutive ids.*/
 
-SELECT DISTINCT s1.id, s1.visit_date, s1.people
-FROM Stadium s1
-JOIN Stadium s2 ON s2.id = s1.id + 1 AND s2.people >= 100
-JOIN Stadium s3 ON s3.id = s1.id + 2 AND s3.people >= 100
+SELECT DISTINCT s1.id , s1.visit_date, s1.people
+FROM stadium s1
+JOIN stadium s2 ON s2.id = s1.id +1 AND s2.people >= 100
+JOIN stadium s3 ON s3.id = s2.id +1 AND s3.people >= 100
 WHERE s1.people >= 100
 
-UNION
+UNION 
 
-SELECT DISTINCT s2.id, s2.visit_date, s2.people
+SELECT DITINCT s2.id ,s2.visit_date,s2.people
 FROM Stadium s1
-JOIN Stadium s2 ON s2.id = s1.id + 1 AND s2.people >= 100
+JOIN Stadium s2 ON s2.id = s1.id +1 AND s2.people >= 100
 JOIN Stadium s3 ON s3.id = s1.id + 2 AND s3.people >= 100
 WHERE s1.people >= 100
 
