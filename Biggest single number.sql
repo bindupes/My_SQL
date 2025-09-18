@@ -66,9 +66,8 @@ Explanation: There are no single numbers in the input table so we return null.
  
 
 */
-SELECT 
-    MAX(num) AS num
-FROM MyNumbers
+SELECT MAX(num) AS num
+FROM MyNumbers 
 GROUP BY num
-HAVING COUNT(*) = 1;
+HAVING COUNT(*) =1;
 
