@@ -43,7 +43,7 @@ The person with id 3 is a friend of people 1, 2, and 4, so he has three friends 
 
 Follow up: In the real world, multiple people could have the same most number of friends. Could you find all these people in this case?*/
 
-SELECT id , COUNT(
+SELECT id , COUNT(friend_id) AS num
  FROM (
  SELECT requester_id AS id , accepter_id AS friend_id FROM RequestAccepted
  UNION
