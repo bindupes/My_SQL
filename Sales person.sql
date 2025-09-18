@@ -96,8 +96,8 @@ According to orders 3 and 4 in the Orders table, it is easy to tell that only sa
 SELECT name
 FROM SalesPerson
 WHERE sales_id NOT IN (
-    SELECT o.sales_id
-    FROM Orders o
-    JOIN Company c ON o.com_id = c.com_id
-    WHERE c.name = 'RED'
-);
+ SELECT o.sales_id
+ FROM Orders o
+ JOIN Company c ON o.com_id = c.com_id
+ WHERE c.name ='RED)
+ 
